@@ -1,0 +1,9 @@
+* {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Espaçamento interno aos elementos. Contrário ao margin */
+    box-sizing: border-box; /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing */
+}
+
+ul {
+    list-style: none; /* retira as bolinhas que vem na lista das imagens */
+}

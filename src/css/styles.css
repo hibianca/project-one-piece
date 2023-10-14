@@ -1,0 +1,93 @@
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+main::after { /* cria um pseudo-elemento depois da tag main. cria um elemento sem ele estar presente no html */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh; /* vh == view port height */
+    width: 80vw; /* vw == view port width */
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat; /* https://cssgradient.io */
+}
+
+main .character {
+    display: none; /* esconder */
+    height: 100vh;
+}
+
+main .selected.character {
+    display: block;
+}
+
+main .character .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobrir o personagem */
+}
+
+.content {
+    position: absolute; /* trás para frente */
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column; /* dispõe os elementos em coluna */
+    justify-content: center; /* centraliza ao centro assim que o elemento passa a utilizar a altura inteira */
+    min-height: 100vh; /* a altura mínima é do tamanho total da tela de altura. ele ocupa toda a altura */
+    max-width: 425px;
+    z-index: 1;
+}
+
+.content .character-name {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px; /* margem inferior entre os elementos */
+}
+
+.content .description {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+.content .logo {
+    background-image: url(../images/one-piece-logo.png);
+    background-size: cover;
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* espaçamento entre os elementos */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.buttons .button {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.buttons .button img {
+    border-radius: 50%;
+}
+
+.buttons .selected.button {
+    transform: scale(1.2); /* botão do luffy aumentado. tamanho padrão é 1 */
+    box-shadow: 0 0 10px #D9D9D9;
+}
